@@ -1,0 +1,23 @@
+{
+  "name": "parcel-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm run build",
+    "dev": "node scripts/pre-build.js && parcel watch src/_layout.html -d wwwroot",
+    "build": "node scripts/pre-build.js && parcel build src/_layout.html -d wwwroot",
+    "publish": "npm run build && dotnet publish -c Release",
+    "dtos": "cd src && x typescript",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@servicestack/client": "^1.0.32",
+    "bootstrap": "^4.5.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.5"
+  }
+}
